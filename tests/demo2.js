@@ -25,9 +25,9 @@ casper.then(function assertRegistrationPage() {
 
 casper.then(function registerGuest() {
   casper.dsl.register({
-    "firstName": "Omnomnom",
-    "lastName": "Yeahbuddy",
-    "email": "OmnomnomYeahbuddy@meetup.com",
+    "firstName": "Luigi",
+    "lastName": "Mario",
+    "email": "SuperMario@meetup.com",
     "password": "meetup",
     "confirmPassword": "meetup"
   }); // using the DSL module
@@ -41,7 +41,7 @@ casper.then(function getName() {
 });
 
 casper.then(function assertProfilePage() {
-  casper.test.assertEquals(name, 'Omnomnom Yeahbuddy');
+  casper.test.assertEquals(name, 'Luigi Mario');
 });
 
 casper.run(function runTest() {
