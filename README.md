@@ -12,3 +12,7 @@ In this repo, we take simpledemo and improve upon its maintainability and readab
 2. Modules + domain specific language
  * http://en.wikipedia.org/wiki/Domain-specific_language
 3. Pre-test CLI argument
+
+In Windows, you can execute the demo by navigating to `/casperjs/batchbin` in commmand-line and running:
+
+`casperjs.bat --direct --log-level=debug --pre=../../pre/initialize.js --baseurl=http://test.resaas.com:888 test ../../tests/demo2.js`
