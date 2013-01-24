@@ -13,6 +13,21 @@ In this repo, we take simpledemo and improve upon its maintainability and readab
  * http://en.wikipedia.org/wiki/Domain-specific_language
 3. Pre-test CLI argument
 
-In Windows, you can execute the demo by navigating to `/casperjs/batchbin` in commmand-line and running:
+# Execution
+In Windows, you can run the demo by navigating to `/casperjs/batchbin` in commmand-line and running:
 
 `casperjs.bat --pre=../../pre/initialize.js --baseurl=http://test.resaas.com:888 test ../../tests/demo2.js`
+
+# Important 
+
+In demo.js, you will want to change the parameters that are passed into the casper.dsl.register to a unique e-mail address otherwise the test will fail:
+
+```
+casper.dsl.register({
+    "firstName": "Luigi",
+    "lastName": "Mario",
+    "email": "SuperMario@meetup.com",  // change this to be unique!
+    "password": "meetup",
+    "confirmPassword": "meetup"
+});
+```
